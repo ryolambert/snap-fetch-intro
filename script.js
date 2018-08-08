@@ -1,6 +1,5 @@
 fetch('https://jsonplaceholder.typicode.com/posts')
 	.then(res => res.json())
-	.then(data => console.log(data))
 	.then((data) => {
 		let output = '<h3> Posts </h3>';
 		data.forEach(function (user){
@@ -13,4 +12,5 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 			`;
 			document.getElementById('fetchOutput').innerHTML = output
 		});
-	});
+	})
+	.then(data => console.log(data));
